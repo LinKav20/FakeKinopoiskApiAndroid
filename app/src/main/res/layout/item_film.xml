@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/film_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/bg_film_item"
+    android:elevation="2dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/number_in_top_textview"
+        style="@style/NumberText"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:text="@string/number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/poster_imageview"
+        android:layout_width="80dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/poster_of_the_film"
+        app:layout_constraintStart_toEndOf="@+id/number_in_top_textview"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/shadow_gray" />
+
+    <TextView
+        android:id="@+id/title_textview"
+        style="@style/TitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poster_imageview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/year_textview"
+        style="@style/SubTitleText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/year"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poster_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/title_textview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
